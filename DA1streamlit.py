@@ -16,7 +16,7 @@ plt.rcParams['figure.figsize'] = (10, 6)
 # 📥 Load and clean dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv('AB_NYC_2019.CSV')
+    f = pd.read_csv(r'C:\Users\saish\Downloads\Project\Data_Analytics\DA1\AB_NYC_2019.CSV')
     df['name'].fillna('Unknown', inplace=True)
     df['host_name'].fillna('Unknown', inplace=True)
     df['last_review'].fillna(pd.to_datetime('2000-01-01'), inplace=True)
